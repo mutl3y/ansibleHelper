@@ -1,6 +1,6 @@
-package org.jetbrains.plugins.template.services
+package com.github.mutl3y.ansiblehelper.services
 
-import org.jetbrains.plugins.template.MyBundle
+import com.github.mutl3y.ansiblehelper.MyBundle
 
 class MyApplicationService {
 
