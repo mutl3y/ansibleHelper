@@ -22,8 +22,7 @@ IDEA versions 2020.2 or later
 
   Download the [latest release](https://github.com/mutl3y/ansibleHelper/releases/latest) and install it manually using
   <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>⚙️</kbd> > <kbd>Install plugin from disk...</kbd>
-
-
+  
 ---
 Plugin based on the [IntelliJ Platform Plugin Template][template].
 
