@@ -27,3 +27,10 @@ IDEA versions 2020.2 or later
 Plugin based on the [IntelliJ Platform Plugin Template][template].
 
 [template]: https://github.com/JetBrains/intellij-platform-plugin-template
+
+If you feel like saying thanks    
+XMR: 49QA139gTEVMDV9LrTbx3qGKKEoYJucCtT4t5oUHHWfPBQbKc4MdktXfKSeT1ggoYVQhVsZcPAMphRS8vu8oxTf769NDTMu
+
+With thanks to Jetbrains and their support of the open source community
+![ https://www.jetbrains.com/?from=ansibleHelper](jetbrains-variant-3.png?v=4&s=200)
+ 
