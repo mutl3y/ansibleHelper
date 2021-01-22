@@ -13,5 +13,4 @@ object MyBundle : AbstractBundle(BUNDLE) {
     @JvmStatic
     fun message(@PropertyKey(resourceBundle = BUNDLE) key: String, vararg params: Any) =
         getMessage(key, *params)
-
 }
