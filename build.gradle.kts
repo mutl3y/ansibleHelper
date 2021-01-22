@@ -1,3 +1,5 @@
+@file:Suppress("PropertyName")
+
 import io.gitlab.arturbosch.detekt.Detekt
 import org.jetbrains.changelog.closure
 import org.jetbrains.changelog.markdownToHTML

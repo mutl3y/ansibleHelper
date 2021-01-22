@@ -1,7 +1,17 @@
 <!-- Keep a Changelog guide -> https://keepachangelog.com -->
 
 # ansibleHelper Changelog
-
 ## [Unreleased]
+
+## [0.0.3] 22/01/2021
+### Changed
+- update changelog
+
+## [0.0.2] 20/01/2021
+### Changed
+- update plugin icon
+
+## [0.0.1] 20/01/2021
 ### Added
-- Initial scaffold created from [IntelliJ Platform Plugin Template](https://github.com/JetBrains/intellij-platform-plugin-template)
+- Initial release to marketplace including both Ansible 2.9 & 2.10
+

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--suppress XmlHighlighting, XmlHighlighting -->
 <svg width="40" height="40" preserveAspectRatio="xMidYMid" version="1.1" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" >
  <g transform="matrix(.14894 0 0 .14894 .91116 .90387)">
   <path d="m255.88 127.87c0 70.455-57.11 127.56-127.57 127.56-70.45 0-127.57-57.11-127.57-127.56 0-70.45 57.116-127.57 127.57-127.57 70.456 0 127.57 57.116 127.57 127.57" fill="#1a1918"/>
