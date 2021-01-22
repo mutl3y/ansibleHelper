@@ -2,6 +2,6 @@
 
 # ansibleHelper Changelog
 
-## [Unreleased]
+## [Released]
 ### Added
-- Initial scaffold created from [IntelliJ Platform Plugin Template](https://github.com/JetBrains/intellij-platform-plugin-template)
+- Initial release to marketplace including both Ansible 2.9 & 2.10
