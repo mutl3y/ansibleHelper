@@ -1,7 +1,7 @@
 <!-- Keep a Changelog guide -> https://keepachangelog.com -->
 
 # ansibleHelper Changelog
-
+## [Unreleased]
 
 ## [0.0.3] 22/01/2021
 ### Changed
@@ -15,4 +15,3 @@
 ### Added
 - Initial release to marketplace including both Ansible 2.9 & 2.10
 
-## [Unreleased]
