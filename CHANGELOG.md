@@ -3,6 +3,10 @@
 # ansibleHelper Changelog
 ## [Unreleased]
 
+##[0.0.4] 26/01/2021
+### changed
+- updated Ansible templates
+
 ## [0.0.3] 22/01/2021
 ### Changed
 - update changelog
