@@ -2,28 +2,9 @@
 
 # ansibleHelper Changelog
 ## [Unreleased]
-### Added
-
-### Changed
-
-### Deprecated
-
-### Removed
 
 ### Fixed
-
-### Security
-## [unspecified]
-### Added
-
-### Changed
-
-### Deprecated
-
-### Removed
-
-### Fixed
-
+- changelog updates to published plugin so it can be seen within idea marketplace
 ### Security
 
 ## [0.0.5]
