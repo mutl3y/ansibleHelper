@@ -5,7 +5,6 @@
 
 ### Fixed
 - changelog updates to published plugin so it can be seen within idea marketplace
-### Security
 
 ## [0.0.5]
 ### fixed
