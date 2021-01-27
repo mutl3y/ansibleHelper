@@ -13,7 +13,10 @@
 ### Fixed
 
 ### Security
-## [unspecified]
+
+## [0.0.5]
+### fixed
+- updated ansible templates so 2.9 and 2.10 are available
 
 ##[0.0.4] 26/01/2021
 ### changed

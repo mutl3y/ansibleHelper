@@ -1,4 +1,4 @@
-<idea-plugin>
+<idea-plugin require-restart="true">
     <id>com.github.mutl3y.ansiblehelper</id>
     <name>AnsibleHelper</name>
     <vendor>mutl3y</vendor>
@@ -10,10 +10,9 @@
     <extensions defaultExtensionNs="com.intellij">
         <applicationService serviceImplementation="com.github.mutl3y.ansiblehelper.services.MyApplicationService"/>
         <projectService serviceImplementation="com.github.mutl3y.ansiblehelper.services.MyProjectService"/>
-        <defaultLiveTemplates file="/liveTemplates/ansible_2_10_idea_live_template.xml"/>
-        <defaultLiveTemplates file="/liveTemplates/ansible_2_9_idea_live_template.xml"/>
+        <defaultLiveTemplates file="liveTemplates/ansible_2_9_idea_live_template.xml"/>
+        <defaultLiveTemplates file="liveTemplates/ansible_2_10_idea_live_template.xml"/>
         <liveTemplateContext implementation="com.github.mutl3y.ansiblehelper.AnsibleContext"/>
-        <liveTemplateMacro implementation="com.github.mutl3y.ansiblehelper.TitleCaseMacro"/>
     </extensions>
 
     <applicationListeners>
