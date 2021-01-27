@@ -1,4 +1,3 @@
-@file:Suppress("PropertyName")
 
 import io.gitlab.arturbosch.detekt.Detekt
 import org.jetbrains.changelog.closure
@@ -79,7 +78,10 @@ tasks {
         targetCompatibility = "1.8"
     }
     withType<KotlinCompile> {
-        kotlinOptions.jvmTarget = "1.8"
+        kotlinOptions{
+            jvmTarget = "1.8"
+            apiVersion = "1.3"
+        }
     }
 
     withType<Detekt> {
