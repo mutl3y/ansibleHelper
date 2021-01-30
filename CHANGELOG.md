@@ -1,8 +1,8 @@
 <!-- Keep a Changelog guide -> https://keepachangelog.com -->
 
 # ansibleHelper Changelog
+## [Unreleased]
 
-## [0.0.6]
 ### Added
 - ansible json schema's for validation
 - Added json schema's for Ansible
