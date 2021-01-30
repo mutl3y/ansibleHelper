@@ -3,10 +3,23 @@ import io.gitlab.arturbosch.detekt.Detekt
 import org.jetbrains.changelog.closure
 import org.jetbrains.changelog.markdownToHTML
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-
+//buildscript {
+//    repositories {
+//        mavenCentral()
+//        maven("https://dl.bintray.com/jetbrains/intellij-plugin-service")
+//    }
+//}
+//
+//repositories {
+//    mavenCentral()
+//    maven("https://jetbrains.bintray.com/intellij-third-party-dependencies")
+//    maven("https://jetbrains.bintray.com/jediterm")
+//    maven("https://jetbrains.bintray.com/pty4j")
+//    maven("https://cache-redirector.jetbrains.com/www.myget.org/F/rd-snapshots/maven")
+//}
 plugins {
     // Java support
-    id("java")
+    java
     // Kotlin support
     id("org.jetbrains.kotlin.jvm") version "1.4.21-2"
     // gradle-intellij-plugin - read more: https://github.com/JetBrains/gradle-intellij-plugin

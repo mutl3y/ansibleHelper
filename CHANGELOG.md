@@ -2,6 +2,8 @@
 
 # ansibleHelper Changelog
 ## [Unreleased]
+### Added
+- ansible json schema's for validation
 
 ### Fixed
 - changelog updates to published plugin so it can be seen within idea marketplace
