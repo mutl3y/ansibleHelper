@@ -2,18 +2,7 @@
 
 # ansibleHelper Changelog
 ## [Unreleased]
-### Added
 
-### Changed
-
-### Deprecated
-
-### Removed
-
-### Fixed
-
-### Security
-## [unspecified]
 ### Added
 - ansible json schema's for validation
 - Added json schema's for Ansible
