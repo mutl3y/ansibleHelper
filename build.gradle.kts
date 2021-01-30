@@ -6,7 +6,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     // Java support
-    id("java")
+    java
     // Kotlin support
     id("org.jetbrains.kotlin.jvm") version "1.4.21-2"
     // gradle-intellij-plugin - read more: https://github.com/JetBrains/gradle-intellij-plugin
@@ -78,7 +78,7 @@ tasks {
         targetCompatibility = "1.8"
     }
     withType<KotlinCompile> {
-        kotlinOptions{
+        kotlinOptions {
             jvmTarget = "1.8"
             apiVersion = "1.3"
         }

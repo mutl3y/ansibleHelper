@@ -5,18 +5,14 @@
 
     <!-- Product and plugin compatibility requirements -->
     <!-- https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html -->
+    <depends>JavaScript</depends>
     <depends>com.intellij.modules.platform</depends>
+    <depends config-file="plugin-json.xml">com.intellij.modules.json</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="com.github.mutl3y.ansiblehelper.services.MyApplicationService"/>
-        <projectService serviceImplementation="com.github.mutl3y.ansiblehelper.services.MyProjectService"/>
         <defaultLiveTemplates file="liveTemplates/ansible_2_9_idea_live_template.xml"/>
         <defaultLiveTemplates file="liveTemplates/ansible_2_10_idea_live_template.xml"/>
         <liveTemplateContext implementation="com.github.mutl3y.ansiblehelper.AnsibleContext"/>
     </extensions>
 
-    <applicationListeners>
-        <listener class="com.github.mutl3y.ansiblehelper.listeners.MyProjectManagerListener"
-                  topic="com.intellij.openapi.project.ProjectManagerListener"/>
-    </applicationListeners>
 </idea-plugin>
