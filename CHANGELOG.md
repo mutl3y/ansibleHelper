@@ -3,12 +3,14 @@
 # ansibleHelper Changelog
 ## [Unreleased]
 
+## [0.0.6]
 ### Added
 - ansible json schema's for validation
 - Added json schema's for Ansible
 
 ### Fixed
 - changelog updates to published plugin so it can be seen within idea marketplace
+- fixed github pipeline issues
 
 ## [0.0.5]
 ### fixed
