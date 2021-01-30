@@ -38,6 +38,6 @@ class AnsibleSchemaProviderFactory : JsonSchemaProviderFactory {
             }
         }
 
-        return listOf(provider3,  provider2, provider1)
+        return listOf(provider3, provider2, provider1)
     }
 }
