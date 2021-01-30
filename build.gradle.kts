@@ -78,7 +78,7 @@ tasks {
         targetCompatibility = "1.8"
     }
     withType<KotlinCompile> {
-        kotlinOptions{
+        kotlinOptions {
             jvmTarget = "1.8"
             apiVersion = "1.3"
         }
