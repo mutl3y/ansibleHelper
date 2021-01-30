@@ -7,6 +7,8 @@
 <!-- Plugin description -->
 This IntelliJ Platform Plugin provides live templates for Ansible 2.9 and 2.10 versions
 
+enables json schema options to validate ansible
+
 IDEA versions 2020.2 or later
 
 <!-- Plugin description end -->
