@@ -1,8 +1,8 @@
 # ansibleHelper
 
 ![Build](https://github.com/mutl3y/ansibleHelper/workflows/Build/badge.svg)
-[![Version](https://img.shields.io/jetbrains/plugin/v/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/15877-ansiblehelper)
-[![Downloads](https://img.shields.io/jetbrains/plugin/d/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/15877-ansiblehelper)
+[![JetBrains plugin versio](https://img.shields.io/jetbrains/plugin/v/15877-ansiblehelper.svg)](https://plugins.jetbrains.com/plugin/15877-ansiblehelper)
+[![JetBrains plugin downloads](https://img.shields.io/jetbrains/plugin/d/15877-ansiblehelper.svg)](https://plugins.jetbrains.com/plugin/15877-ansiblehelper)
 
 <!-- Plugin description -->
 This IntelliJ Platform Plugin provides live templates for Ansible 2.9 and 2.10 versions

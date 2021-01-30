@@ -9,9 +9,11 @@ import com.jetbrains.jsonSchema.extension.JsonSchemaProviderFactory
 class AnsibleSchemaProviderFactory : JsonSchemaProviderFactory {
     override fun getProviders(project: Project): List<JsonSchemaFileProvider> {
         val provider1: EmbeddedJsonSchemaFileProvider = object : EmbeddedJsonSchemaFileProvider(
-            "ansible-role-2.9.json", "Ansible Role 2.9",
+            "ansible-role-2.9.json",
+            "Ansible Role 2.9",
             "https://json.schemastore.org/ansible-role-2.9",
-            AnsibleSchemaProviderFactory::class.java, "/jsonSchema/"
+            AnsibleSchemaProviderFactory::class.java,
+            "/jsonSchema/"
         ) {
             override fun isAvailable(file: VirtualFile): Boolean {
                 return file.exists()
@@ -19,9 +21,11 @@ class AnsibleSchemaProviderFactory : JsonSchemaProviderFactory {
         }
 
         val provider2: EmbeddedJsonSchemaFileProvider = object : EmbeddedJsonSchemaFileProvider(
-            "ansible-collection-galaxy.json", "Ansible Collection Galaxy",
+            "ansible-collection-galaxy.json",
+            "Ansible Collection Galaxy",
             "https://json.schemastore.org/ansible-collection-galaxy",
-            AnsibleSchemaProviderFactory::class.java, "/jsonSchema/"
+            AnsibleSchemaProviderFactory::class.java,
+            "/jsonSchema/"
         ) {
             override fun isAvailable(file: VirtualFile): Boolean {
                 return file.exists()
@@ -29,9 +33,11 @@ class AnsibleSchemaProviderFactory : JsonSchemaProviderFactory {
         }
 
         val provider3: EmbeddedJsonSchemaFileProvider = object : EmbeddedJsonSchemaFileProvider(
-            "ansible-playbook.json", "Ansible Playbook",
+            "ansible-playbook.json",
+            "Ansible Playbook",
             "https://json.schemastore.org/ansible-playbook",
-            AnsibleSchemaProviderFactory::class.java, "/jsonSchema/"
+            AnsibleSchemaProviderFactory::class.java,
+            "/jsonSchema/"
         ) {
             override fun isAvailable(file: VirtualFile): Boolean {
                 return file.exists()
