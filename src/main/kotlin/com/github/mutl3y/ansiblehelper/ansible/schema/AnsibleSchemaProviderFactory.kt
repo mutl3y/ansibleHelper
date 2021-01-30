@@ -1,15 +1,11 @@
 package com.github.mutl3y.ansiblehelper.ansible.schema
 
-
 import com.intellij.lang.javascript.EmbeddedJsonSchemaFileProvider
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.vfs.VirtualFile
 import com.jetbrains.jsonSchema.extension.JsonSchemaFileProvider
 import com.jetbrains.jsonSchema.extension.JsonSchemaProviderFactory
 
-
-//    override fun getProviders(project: Project) =
-//            listOf(AnsibleYamlSchemaProvider(project))
 class AnsibleConfigJsonSchemaProviderFactory : JsonSchemaProviderFactory {
     override fun getProviders(project: Project): List<JsonSchemaFileProvider> {
         val provider1: EmbeddedJsonSchemaFileProvider = object : EmbeddedJsonSchemaFileProvider(
@@ -42,12 +38,8 @@ class AnsibleConfigJsonSchemaProviderFactory : JsonSchemaProviderFactory {
             }
         }
 
-
-
-        return listOf(provider3,provider2,provider1)
+        return listOf(provider3,  provider2, provider1)
     }
-
-
 }
 
 

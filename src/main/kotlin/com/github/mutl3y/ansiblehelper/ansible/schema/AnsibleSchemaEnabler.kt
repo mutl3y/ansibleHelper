@@ -1,6 +1,5 @@
 package com.github.mutl3y.ansiblehelper.ansible.schema
 
-
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.vfs.VirtualFile
 import com.jetbrains.jsonSchema.extension.JsonSchemaEnabler
@@ -15,5 +14,4 @@ class AnsibleSchemaEnabler : JsonSchemaEnabler {
     override fun canBeSchemaFile(file: VirtualFile?): Boolean {
         return true
     }
-
 }
