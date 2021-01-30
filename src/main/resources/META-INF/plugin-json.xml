@@ -1,7 +1,7 @@
 <idea-plugin>
     <extensions defaultExtensionNs="JavaScript">
         <JsonSchema.ProviderFactory
-                implementation="com.github.mutl3y.ansiblehelper.ansible.schema.AnsibleConfigJsonSchemaProviderFactory"/>
+                implementation="com.github.mutl3y.ansiblehelper.ansible.schema.AnsibleSchemaProviderFactory"/>
     </extensions>
 
     <extensions defaultExtensionNs="com.intellij.json">
