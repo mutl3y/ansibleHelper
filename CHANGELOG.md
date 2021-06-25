@@ -2,6 +2,18 @@
 
 # ansibleHelper Changelog
 ## [Unreleased]
+### Added
+
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+## [unspecified]
 
 ## [0.0.6]
 ### Added
