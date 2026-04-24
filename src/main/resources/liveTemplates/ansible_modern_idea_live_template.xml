@@ -77,7 +77,7 @@
     <context><option name="YAML" value="true" /><option name="OTHER" value="true" /></context>
 </template>
 <!-- ansible.builtin.systemd_service -->
-<template name="__ansible_builtin_systemd" value="- name: $stub_title$&#10;  ansible.builtin.systemd_service:&#10;    name: $stub_name$&#10;    state: $stub_state$&#10;   # enabled: $stub_enabled$&#10;   # daemon_reload: $stub_daemon_reload$&#10;   # daemon_reexec: $stub_daemon_reexec$&#10;   # masked: $stub_masked$&#10;   # scope: $stub_scope$&#10;" description="Manage systemd units." toReformat="false" toShortenFQNames="true">
+<template name="__ansible_builtin_systemd_service" value="- name: $stub_title$&#10;  ansible.builtin.systemd_service:&#10;    name: $stub_name$&#10;    state: $stub_state$&#10;   # enabled: $stub_enabled$&#10;   # daemon_reload: $stub_daemon_reload$&#10;   # daemon_reexec: $stub_daemon_reexec$&#10;   # masked: $stub_masked$&#10;   # scope: $stub_scope$&#10;" description="Manage systemd units." toReformat="false" toShortenFQNames="true">
     <variable name="stub_title" expression="&quot;Manage systemd unit&quot;" defaultValue="" alwaysStopAt="true" />
     <variable name="stub_name" expression="&quot;(type=str) Name of the service. When using in a chroot environment you always need to specify the full name, i.e. crond.service.&quot;" defaultValue="" alwaysStopAt="true" />
     <variable name="stub_state" expression="&quot;(type=str) [reloaded, restarted, started, stopped] Started/stopped are idempotent actions that will not run if the service is already in the desired state.&quot;" defaultValue="" alwaysStopAt="true" />

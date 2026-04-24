@@ -200,6 +200,12 @@ jobs:
           gh release list --json isDraft,tagName --jq '.[] | select(.isDraft) | .tagName' \
             | xargs -I '{}' gh release delete '{}' --yes || true
 
+      # Download plugin artifact provided by the build job
+      - name: Download Artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: plugin-artifact
+
       # Create new release draft - which is not publicly visible and requires manual acceptance
       - name: Create Release Draft
         uses: softprops/action-gh-release@v2
