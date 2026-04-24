@@ -23,6 +23,7 @@ plugins {
 val pluginGroup: String by project
 // `pluginName_` variable ends with `_` because of the collision with Kotlin magic getter in the `intellij` closure.
 // Read more about the issue: https://github.com/JetBrains/intellij-platform-plugin-template/issues/29
+@Suppress("ktlint:standard:property-naming")
 val pluginName_: String by project
 val pluginVersion: String by project
 val pluginSinceBuild: String by project
@@ -103,14 +104,14 @@ tasks {
                     }
                     subList(indexOf(start) + 1, indexOf(end))
                 }.joinToString("\n").run { markdownToHTML(this) }
-            }
+            },
         )
 
         // Get the latest available change notes from the changelog file
         changeNotes.set(
             provider {
                 changelog.renderItem(changelog.getLatest(), Changelog.OutputType.HTML)
-            }
+            },
         )
     }
 
