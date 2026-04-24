@@ -5,7 +5,7 @@ package com.github.mutl3y.ansiblehelper
 import com.intellij.codeInsight.template.TemplateActionContext
 import com.intellij.codeInsight.template.TemplateContextType
 
-class AnsibleContext private constructor() : TemplateContextType("ANSIBLE", "Ansible") {
+class AnsibleContext : TemplateContextType("ANSIBLE", "Ansible") {
     override fun isInContext(templateActionContext: TemplateActionContext): Boolean {
         return templateActionContext.file.name.endsWith(".yml")
     }
