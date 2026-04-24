@@ -8,29 +8,30 @@ import com.jetbrains.jsonSchema.extension.JsonSchemaProviderFactory
 import com.jetbrains.jsonSchema.extension.SchemaType
 
 class AnsibleSchemaProviderFactory : JsonSchemaProviderFactory {
-    override fun getProviders(project: Project): List<JsonSchemaFileProvider> = listOf(
-        AnsibleSchemaFileProvider(
-            "ansible-playbook.json",
-            "Ansible Playbook",
-            "https://json.schemastore.org/ansible-playbook"
-        ),
-        AnsibleSchemaFileProvider(
-            "ansible-collection-galaxy.json",
-            "Ansible Collection Galaxy",
-            "https://json.schemastore.org/ansible-collection-galaxy"
-        ),
-        AnsibleSchemaFileProvider(
-            "ansible-role-2.9.json",
-            "Ansible Role 2.9",
-            "https://json.schemastore.org/ansible-role-2.9"
-        ),
-    )
+    override fun getProviders(project: Project): List<JsonSchemaFileProvider> =
+        listOf(
+            AnsibleSchemaFileProvider(
+                "ansible-playbook.json",
+                "Ansible Playbook",
+                "https://json.schemastore.org/ansible-playbook",
+            ),
+            AnsibleSchemaFileProvider(
+                "ansible-collection-galaxy.json",
+                "Ansible Collection Galaxy",
+                "https://json.schemastore.org/ansible-collection-galaxy",
+            ),
+            AnsibleSchemaFileProvider(
+                "ansible-role-2.9.json",
+                "Ansible Role 2.9",
+                "https://json.schemastore.org/ansible-role-2.9",
+            ),
+        )
 }
 
 class AnsibleSchemaFileProvider(
     private val fileName: String,
     private val schemaName: String,
-    private val remoteSource: String
+    private val remoteSource: String,
 ) : JsonSchemaFileProvider {
 
     override fun getName(): String = schemaName

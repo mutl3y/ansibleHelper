@@ -13,6 +13,7 @@ class AnsibleSchemaEnabler : JsonSchemaEnabler {
     override fun shouldShowSwitcherWidget(file: VirtualFile): Boolean {
         return true
     }
+
     override fun canBeSchemaFile(file: VirtualFile?): Boolean {
         return true
     }
