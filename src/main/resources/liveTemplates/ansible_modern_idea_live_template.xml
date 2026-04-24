@@ -1,0 +1,432 @@
+<templateSet group="Ansible_modern">
+<!-- ansible.builtin.command -->
+<template name="__ansible_builtin_command" value="- name: $stub_title$&#10;  ansible.builtin.command:&#10;    cmd: $stub_cmd$&#10;   # argv: $stub_argv$&#10;   # chdir: $stub_chdir$&#10;   # creates: $stub_creates$&#10;   # removes: $stub_removes$&#10;   # stdin: $stub_stdin$&#10;   # stdin_add_newline: $stub_stdin_add_newline$&#10;   # strip_empty_ends: $stub_strip_empty_ends$&#10;" description="Execute commands on targets. Use ansible.builtin.shell if shell features are needed." toReformat="false" toShortenFQNames="true">
+    <variable name="stub_title" expression="&quot;Run command&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_cmd" expression="&quot;(type=str) The command to run.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_argv" expression="&quot;(type=list) Allows the user to provide the command as a list vs a string. Only one of args or argv can be provided.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_chdir" expression="&quot;(type=path) Change into this directory before running the command.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_creates" expression="&quot;(type=path) A filename or glob pattern. If a matching file already exists, this step will not be run. This is checked before removes is checked.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_removes" expression="&quot;(type=path) A filename or glob pattern. If a matching file exists, this step will be run.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_stdin" expression="&quot;(type=str) Set the stdin of the command directly to the specified value.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_stdin_add_newline" expression="&quot;(type=bool) If set to true, append a newline to stdin data. Default: true.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_strip_empty_ends" expression="&quot;(type=bool) Strip empty lines from the end of stdout/stderr in result. Default: true.&quot;" defaultValue="" alwaysStopAt="true" />
+    <context><option name="YAML" value="true" /><option name="OTHER" value="true" /></context>
+</template>
+<!-- ansible.builtin.shell -->
+<template name="__ansible_builtin_shell" value="- name: $stub_title$&#10;  ansible.builtin.shell:&#10;    cmd: $stub_cmd$&#10;   # chdir: $stub_chdir$&#10;   # creates: $stub_creates$&#10;   # removes: $stub_removes$&#10;   # executable: $stub_executable$&#10;   # stdin: $stub_stdin$&#10;" description="Execute shell commands on targets." toReformat="false" toShortenFQNames="true">
+    <variable name="stub_title" expression="&quot;Run shell command&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_cmd" expression="&quot;(type=str) The command to run, allowing use of shell variables, redirects, pipes etc.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_chdir" expression="&quot;(type=path) Change into this directory before running the command.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_creates" expression="&quot;(type=path) A filename, when it already exists, this step will not be run.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_removes" expression="&quot;(type=path) A filename, when it does not exist, this step will not be run.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_executable" expression="&quot;(type=path) Change the shell used to execute the command. Default: /bin/sh.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_stdin" expression="&quot;(type=str) Set the stdin of the command directly to the specified value.&quot;" defaultValue="" alwaysStopAt="true" />
+    <context><option name="YAML" value="true" /><option name="OTHER" value="true" /></context>
+</template>
+<!-- ansible.builtin.copy -->
+<template name="__ansible_builtin_copy" value="- name: $stub_title$&#10;  ansible.builtin.copy:&#10;    src: $stub_src$&#10;    dest: $stub_dest$&#10;   # content: $stub_content$&#10;   # owner: $stub_owner$&#10;   # group: $stub_group$&#10;   # mode: $stub_mode$&#10;   # backup: $stub_backup$&#10;   # force: $stub_force$&#10;   # remote_src: $stub_remote_src$&#10;   # validate: $stub_validate$&#10;" description="Copy files to remote locations." toReformat="false" toShortenFQNames="true">
+    <variable name="stub_title" expression="&quot;Copy file&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_src" expression="&quot;(type=path) Local path to a file to copy to the remote server. If path is a directory, it is copied recursively.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_dest" expression="&quot;(type=path) Remote absolute path where the file should be copied to.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_content" expression="&quot;(type=str) When used instead of src, sets the contents of a file directly to the specified value.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_owner" expression="&quot;(type=str) Name of the user that should own the filesystem object.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_group" expression="&quot;(type=str) Name of the group that should own the filesystem object.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_mode" expression="&quot;(type=raw) Permissions of the destination file or directory. Examples: '0644', 'u+rw', 'u=rw,g=r,o=r'.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_backup" expression="&quot;(type=bool) Create a backup file including the timestamp information. Default: false.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_force" expression="&quot;(type=bool) Influence whether the remote file must always be replaced. Default: true.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_remote_src" expression="&quot;(type=bool) If false, the file will be transferred from the Ansible controller. If true, the file is on the remote/target host. Default: false.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_validate" expression="&quot;(type=str) The validation command to run before copying into place. Example: /usr/sbin/visudo -cf %s.&quot;" defaultValue="" alwaysStopAt="true" />
+    <context><option name="YAML" value="true" /><option name="OTHER" value="true" /></context>
+</template>
+<!-- ansible.builtin.file -->
+<template name="__ansible_builtin_file" value="- name: $stub_title$&#10;  ansible.builtin.file:&#10;    path: $stub_path$&#10;    state: $stub_state$&#10;   # owner: $stub_owner$&#10;   # group: $stub_group$&#10;   # mode: $stub_mode$&#10;   # recurse: $stub_recurse$&#10;   # src: $stub_src$&#10;" description="Manage files and file properties." toReformat="false" toShortenFQNames="true">
+    <variable name="stub_title" expression="&quot;Manage file&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_path" expression="&quot;(type=path) Path of the file being managed.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_state" expression="&quot;(type=str) [absent, directory, file, hard, link, touch] If absent, directories will be recursively deleted, and files or symlinks will be unlinked.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_owner" expression="&quot;(type=str) Name of the user that should own the filesystem object.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_group" expression="&quot;(type=str) Name of the group that should own the filesystem object.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_mode" expression="&quot;(type=raw) Permissions of the destination file or directory.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_recurse" expression="&quot;(type=bool) Recursively set the specified file attributes on directory contents. Default: false.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_src" expression="&quot;(type=path) Path of the file to link to. Used for state=link and state=hard.&quot;" defaultValue="" alwaysStopAt="true" />
+    <context><option name="YAML" value="true" /><option name="OTHER" value="true" /></context>
+</template>
+<!-- ansible.builtin.template -->
+<template name="__ansible_builtin_template" value="- name: $stub_title$&#10;  ansible.builtin.template:&#10;    src: $stub_src$&#10;    dest: $stub_dest$&#10;   # owner: $stub_owner$&#10;   # group: $stub_group$&#10;   # mode: $stub_mode$&#10;   # backup: $stub_backup$&#10;   # validate: $stub_validate$&#10;   # lstrip_blocks: $stub_lstrip_blocks$&#10;   # trim_blocks: $stub_trim_blocks$&#10;" description="Template a file out to a remote server using Jinja2." toReformat="false" toShortenFQNames="true">
+    <variable name="stub_title" expression="&quot;Template file&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_src" expression="&quot;(type=path) Path of a Jinja2 formatted template on the Ansible controller.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_dest" expression="&quot;(type=path) Location to render the template to on the remote machine.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_owner" expression="&quot;(type=str) Name of the user that should own the file.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_group" expression="&quot;(type=str) Name of the group that should own the file.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_mode" expression="&quot;(type=raw) Permissions of the resulting file.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_backup" expression="&quot;(type=bool) Create a backup file including the timestamp information. Default: false.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_validate" expression="&quot;(type=str) The validation command to run before copying into place.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_lstrip_blocks" expression="&quot;(type=bool) Whether to strip leading whitespace from the start of a line to a block tag. Default: false.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_trim_blocks" expression="&quot;(type=bool) If this is set to true the first newline after a block is removed. Default: false.&quot;" defaultValue="" alwaysStopAt="true" />
+    <context><option name="YAML" value="true" /><option name="OTHER" value="true" /></context>
+</template>
+<!-- ansible.builtin.service -->
+<template name="__ansible_builtin_service" value="- name: $stub_title$&#10;  ansible.builtin.service:&#10;    name: $stub_name$&#10;    state: $stub_state$&#10;   # enabled: $stub_enabled$&#10;   # daemon_reload: $stub_daemon_reload$&#10;   # pattern: $stub_pattern$&#10;   # runlevel: $stub_runlevel$&#10;   # sleep: $stub_sleep$&#10;" description="Manage services." toReformat="false" toShortenFQNames="true">
+    <variable name="stub_title" expression="&quot;Manage service&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_name" expression="&quot;(type=str) Name of the service.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_state" expression="&quot;(type=str) [reloaded, restarted, started, stopped] started/stopped are idempotent actions that will not run if the service is already in the desired state.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_enabled" expression="&quot;(type=bool) Whether the service should start on boot.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_daemon_reload" expression="&quot;(type=bool) Run daemon-reload before doing any other operations. Default: false.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_pattern" expression="&quot;(type=str) If the service does not respond to the status command, name a substring to look for in the output of the ps command.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_runlevel" expression="&quot;(type=str) For OpenRC init scripts, the runlevel that this service belongs to. Default: default.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_sleep" expression="&quot;(type=int) If the service is being restarted then sleep this many seconds between the stop and start command.&quot;" defaultValue="" alwaysStopAt="true" />
+    <context><option name="YAML" value="true" /><option name="OTHER" value="true" /></context>
+</template>
+<!-- ansible.builtin.systemd_service -->
+<template name="__ansible_builtin_systemd_service" value="- name: $stub_title$&#10;  ansible.builtin.systemd_service:&#10;    name: $stub_name$&#10;    state: $stub_state$&#10;   # enabled: $stub_enabled$&#10;   # daemon_reload: $stub_daemon_reload$&#10;   # daemon_reexec: $stub_daemon_reexec$&#10;   # masked: $stub_masked$&#10;   # scope: $stub_scope$&#10;" description="Manage systemd units." toReformat="false" toShortenFQNames="true">
+    <variable name="stub_title" expression="&quot;Manage systemd unit&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_name" expression="&quot;(type=str) Name of the service. When using in a chroot environment you always need to specify the full name, i.e. crond.service.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_state" expression="&quot;(type=str) [reloaded, restarted, started, stopped] Started/stopped are idempotent actions that will not run if the service is already in the desired state.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_enabled" expression="&quot;(type=bool) Whether the service should start on boot.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_daemon_reload" expression="&quot;(type=bool) Run daemon-reload before doing any other operations. Default: false.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_daemon_reexec" expression="&quot;(type=bool) Run daemon_reexec command before doing any other operations. Default: false.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_masked" expression="&quot;(type=bool) Whether the unit should be masked or not.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_scope" expression="&quot;(type=str) [system, user, global] Run systemctl within a given service manager scope. Default: system.&quot;" defaultValue="" alwaysStopAt="true" />
+    <context><option name="YAML" value="true" /><option name="OTHER" value="true" /></context>
+</template>
+<!-- ansible.builtin.user -->
+<template name="__ansible_builtin_user" value="- name: $stub_title$&#10;  ansible.builtin.user:&#10;    name: $stub_name$&#10;    state: $stub_state$&#10;   # uid: $stub_uid$&#10;   # group: $stub_group$&#10;   # groups: $stub_groups$&#10;   # append: $stub_append$&#10;   # comment: $stub_comment$&#10;   # home: $stub_home$&#10;   # shell: $stub_shell$&#10;   # password: $stub_password$&#10;   # system: $stub_system$&#10;   # create_home: $stub_create_home$&#10;   # remove: $stub_remove$&#10;" description="Manage user accounts." toReformat="false" toShortenFQNames="true">
+    <variable name="stub_title" expression="&quot;Manage user&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_name" expression="&quot;(type=str) Name of the user to create, remove or modify.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_state" expression="&quot;(type=str) [absent, present] Whether the account should exist or not. Default: present.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_uid" expression="&quot;(type=int) Optionally sets the UID of the user.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_group" expression="&quot;(type=str) Optionally sets the user's primary group.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_groups" expression="&quot;(type=list) List of groups user will be added to. Use append=true to add without removing from other groups.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_append" expression="&quot;(type=bool) If true, add the user to the groups specified in groups. Default: false.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_comment" expression="&quot;(type=str) Optionally sets the description (aka GECOS) of user account.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_home" expression="&quot;(type=path) Optionally set the user's home directory.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_shell" expression="&quot;(type=str) Optionally set the user's shell. Default: /bin/bash or /sbin/nologin depending on the OS.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_password" expression="&quot;(type=str) If provided, set the user's password to the provided encrypted hash.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_system" expression="&quot;(type=bool) When creating an account state=present, setting this to yes makes the user a system account. Default: false.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_create_home" expression="&quot;(type=bool) Unless set to false, a home directory will be made for the user when the account is created or the home directory does not exist. Default: true.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_remove" expression="&quot;(type=bool) This only affects state=absent, it attempts to remove directories associated with the user. Default: false.&quot;" defaultValue="" alwaysStopAt="true" />
+    <context><option name="YAML" value="true" /><option name="OTHER" value="true" /></context>
+</template>
+<!-- ansible.builtin.group -->
+<template name="__ansible_builtin_group" value="- name: $stub_title$&#10;  ansible.builtin.group:&#10;    name: $stub_name$&#10;    state: $stub_state$&#10;   # gid: $stub_gid$&#10;   # system: $stub_system$&#10;" description="Add or remove groups." toReformat="false" toShortenFQNames="true">
+    <variable name="stub_title" expression="&quot;Manage group&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_name" expression="&quot;(type=str) Name of the group to manage.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_state" expression="&quot;(type=str) [absent, present] Whether the group should be present or not on the remote host. Default: present.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_gid" expression="&quot;(type=int) Optional GID to set for the group.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_system" expression="&quot;(type=bool) If true, indicates that the group created is a system group. Default: false.&quot;" defaultValue="" alwaysStopAt="true" />
+    <context><option name="YAML" value="true" /><option name="OTHER" value="true" /></context>
+</template>
+<!-- ansible.builtin.apt -->
+<template name="__ansible_builtin_apt" value="- name: $stub_title$&#10;  ansible.builtin.apt:&#10;    name: $stub_name$&#10;    state: $stub_state$&#10;   # update_cache: $stub_update_cache$&#10;   # cache_valid_time: $stub_cache_valid_time$&#10;   # upgrade: $stub_upgrade$&#10;   # autoremove: $stub_autoremove$&#10;   # purge: $stub_purge$&#10;   # install_recommends: $stub_install_recommends$&#10;   # deb: $stub_deb$&#10;" description="Manage apt packages on Debian/Ubuntu." toReformat="false" toShortenFQNames="true">
+    <variable name="stub_title" expression="&quot;Manage apt package&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_name" expression="&quot;(type=list) A list of package names, like foopkg, foopkg=1.0.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_state" expression="&quot;(type=str) [absent, build-dep, fixed, latest, present] Indicates the desired package state. Default: present.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_update_cache" expression="&quot;(type=bool) Run the equivalent of apt-get update before the operation. Default: false.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_cache_valid_time" expression="&quot;(type=int) Update the apt cache if it is older than the cache_valid_time. Default: 0.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_upgrade" expression="&quot;(type=str) [dist, full, no, safe, yes] If yes, upgrade all installed packages. Default: no.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_autoremove" expression="&quot;(type=bool) If yes, remove unused dependency packages. Default: false.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_purge" expression="&quot;(type=bool) Will force purging of configuration files if the module state is set to absent. Default: false.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_install_recommends" expression="&quot;(type=bool) Corresponds to the --no-install-recommends option for apt. Default: null (uses the system default).&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_deb" expression="&quot;(type=path) Path to a .deb package on the remote machine.&quot;" defaultValue="" alwaysStopAt="true" />
+    <context><option name="YAML" value="true" /><option name="OTHER" value="true" /></context>
+</template>
+<!-- ansible.builtin.yum -->
+<template name="__ansible_builtin_yum" value="- name: $stub_title$&#10;  ansible.builtin.yum:&#10;    name: $stub_name$&#10;    state: $stub_state$&#10;   # update_cache: $stub_update_cache$&#10;   # enablerepo: $stub_enablerepo$&#10;   # disablerepo: $stub_disablerepo$&#10;   # exclude: $stub_exclude$&#10;   # security: $stub_security$&#10;" description="Manage packages with the yum package manager on RHEL/CentOS/Fedora." toReformat="false" toShortenFQNames="true">
+    <variable name="stub_title" expression="&quot;Manage yum package&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_name" expression="&quot;(type=list) A package name, or package specifier with version, like name-1.0. Globs are not supported.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_state" expression="&quot;(type=str) [absent, installed, latest, present, removed] Whether to install or remove. Default: present.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_update_cache" expression="&quot;(type=bool) Force yum to check if cache is out of date and redownload if needed. Default: false.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_enablerepo" expression="&quot;(type=str) Enable additional repositories by name (as listed in .repo files).&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_disablerepo" expression="&quot;(type=str) Disable certain repositories (as listed in .repo files).&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_exclude" expression="&quot;(type=list) Package name(s) to exclude when state=present, or latest.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_security" expression="&quot;(type=bool) If set to true, and state=latest then only installs updates that have been marked security related. Default: false.&quot;" defaultValue="" alwaysStopAt="true" />
+    <context><option name="YAML" value="true" /><option name="OTHER" value="true" /></context>
+</template>
+<!-- ansible.builtin.dnf -->
+<template name="__ansible_builtin_dnf" value="- name: $stub_title$&#10;  ansible.builtin.dnf:&#10;    name: $stub_name$&#10;    state: $stub_state$&#10;   # update_cache: $stub_update_cache$&#10;   # enablerepo: $stub_enablerepo$&#10;   # disablerepo: $stub_disablerepo$&#10;   # exclude: $stub_exclude$&#10;   # security: $stub_security$&#10;   # install_weak_deps: $stub_install_weak_deps$&#10;" description="Manage packages with the dnf package manager on Fedora/RHEL 8+." toReformat="false" toShortenFQNames="true">
+    <variable name="stub_title" expression="&quot;Manage dnf package&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_name" expression="&quot;(type=list) A package name or package specifier with version.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_state" expression="&quot;(type=str) [absent, installed, latest, present, removed] Whether to install or remove a package. Default: present.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_update_cache" expression="&quot;(type=bool) Force dnf to check if cache is out of date and redownload if needed. Default: false.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_enablerepo" expression="&quot;(type=str) Enable additional repositories by name.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_disablerepo" expression="&quot;(type=str) Disable certain repositories.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_exclude" expression="&quot;(type=list) Package name(s) to exclude when state=present or latest.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_security" expression="&quot;(type=bool) If set to true, and state=latest then only installs updates that have been marked security related. Default: false.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_install_weak_deps" expression="&quot;(type=bool) Whether to install weak dependencies. Default: true.&quot;" defaultValue="" alwaysStopAt="true" />
+    <context><option name="YAML" value="true" /><option name="OTHER" value="true" /></context>
+</template>
+<!-- ansible.builtin.package -->
+<template name="__ansible_builtin_package" value="- name: $stub_title$&#10;  ansible.builtin.package:&#10;    name: $stub_name$&#10;    state: $stub_state$&#10;   # use: $stub_use$&#10;" description="Generic OS package manager. Uses the underlying OS package manager." toReformat="false" toShortenFQNames="true">
+    <variable name="stub_title" expression="&quot;Manage OS package&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_name" expression="&quot;(type=list) Package name(s). When using state=latest, this can be '*' to update all packages.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_state" expression="&quot;(type=str) Whether to install (present/latest), or remove (absent) a package.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_use" expression="&quot;(type=str) The required package manager module to use (yum, apt, etc). Default: auto.&quot;" defaultValue="" alwaysStopAt="true" />
+    <context><option name="YAML" value="true" /><option name="OTHER" value="true" /></context>
+</template>
+<!-- ansible.builtin.pip -->
+<template name="__ansible_builtin_pip" value="- name: $stub_title$&#10;  ansible.builtin.pip:&#10;    name: $stub_name$&#10;   # state: $stub_state$&#10;   # version: $stub_version$&#10;   # requirements: $stub_requirements$&#10;   # virtualenv: $stub_virtualenv$&#10;   # virtualenv_command: $stub_virtualenv_command$&#10;   # virtualenv_python: $stub_virtualenv_python$&#10;   # executable: $stub_executable$&#10;   # extra_args: $stub_extra_args$&#10;" description="Manage Python library dependencies." toReformat="false" toShortenFQNames="true">
+    <variable name="stub_title" expression="&quot;Manage pip package&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_name" expression="&quot;(type=list) The name of a Python library to install or the url of a remote package.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_state" expression="&quot;(type=str) [absent, forcereinstall, latest, present] The state of module. Default: present.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_version" expression="&quot;(type=str) The explicit version of the Python library that needs to be installed.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_requirements" expression="&quot;(type=str) The path to a pip requirements file.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_virtualenv" expression="&quot;(type=path) An optional path to a virtualenv directory to install into.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_virtualenv_command" expression="&quot;(type=path) The command or a pathname to the Python interpreter to use for the virtual environment. Default: virtualenv.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_virtualenv_python" expression="&quot;(type=str) The Python executable used for creating the virtual environment.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_executable" expression="&quot;(type=path) The explicit executable or a pathname to the pip executable.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_extra_args" expression="&quot;(type=str) Extra arguments passed to pip.&quot;" defaultValue="" alwaysStopAt="true" />
+    <context><option name="YAML" value="true" /><option name="OTHER" value="true" /></context>
+</template>
+<!-- ansible.builtin.debug -->
+<template name="__ansible_builtin_debug" value="- name: $stub_title$&#10;  ansible.builtin.debug:&#10;   # msg: $stub_msg$&#10;   # var: $stub_var$&#10;   # verbosity: $stub_verbosity$&#10;" description="Print statements during execution." toReformat="false" toShortenFQNames="true">
+    <variable name="stub_title" expression="&quot;Debug message&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_msg" expression="&quot;(type=str) The customized message that is printed. Mutually exclusive with var. Default: Hello world!&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_var" expression="&quot;(type=str) A variable name to debug. Mutually exclusive with msg.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_verbosity" expression="&quot;(type=int) A number that controls when the debug is run, if you set to 3 it will only run debug when -vvv or above. Default: 0.&quot;" defaultValue="" alwaysStopAt="true" />
+    <context><option name="YAML" value="true" /><option name="OTHER" value="true" /></context>
+</template>
+<!-- ansible.builtin.set_fact -->
+<template name="__ansible_builtin_set_fact" value="- name: $stub_title$&#10;  ansible.builtin.set_fact:&#10;    $stub_key$: $stub_value$&#10;   # cacheable: $stub_cacheable$&#10;" description="Set host variable(s) and fact(s)." toReformat="false" toShortenFQNames="true">
+    <variable name="stub_title" expression="&quot;Set fact&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_key" expression="&quot;variable_name&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_value" expression="&quot;value&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_cacheable" expression="&quot;(type=bool) This boolean converts the variable into an actual fact which will also be retained across executions. Default: false.&quot;" defaultValue="" alwaysStopAt="true" />
+    <context><option name="YAML" value="true" /><option name="OTHER" value="true" /></context>
+</template>
+<!-- ansible.builtin.include_tasks -->
+<template name="__ansible_builtin_include_tasks" value="- name: $stub_title$&#10;  ansible.builtin.include_tasks:&#10;    file: $stub_file$&#10;   # apply: $stub_apply$&#10;" description="Dynamically include a task list." toReformat="false" toShortenFQNames="true">
+    <variable name="stub_title" expression="&quot;Include tasks&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_file" expression="&quot;(type=str) The name of the imported file is specified directly without any other option.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_apply" expression="&quot;(type=str) Accepts a hash of task keywords (e.g. tags, become) that will be applied to the tasks within the include.&quot;" defaultValue="" alwaysStopAt="true" />
+    <context><option name="YAML" value="true" /><option name="OTHER" value="true" /></context>
+</template>
+<!-- ansible.builtin.import_tasks -->
+<template name="__ansible_builtin_import_tasks" value="- name: $stub_title$&#10;  ansible.builtin.import_tasks:&#10;    file: $stub_file$&#10;" description="Import a task list statically." toReformat="false" toShortenFQNames="true">
+    <variable name="stub_title" expression="&quot;Import tasks&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_file" expression="&quot;(type=str) The name of the imported file is specified directly without any other option.&quot;" defaultValue="" alwaysStopAt="true" />
+    <context><option name="YAML" value="true" /><option name="OTHER" value="true" /></context>
+</template>
+<!-- ansible.builtin.import_playbook -->
+<template name="__ansible_builtin_import_playbook" value="- ansible.builtin.import_playbook: $stub_playbook$&#10;" description="Import a playbook statically." toReformat="false" toShortenFQNames="true">
+    <variable name="stub_playbook" expression="&quot;path/to/playbook.yml&quot;" defaultValue="" alwaysStopAt="true" />
+    <context><option name="YAML" value="true" /><option name="OTHER" value="true" /></context>
+</template>
+<!-- ansible.builtin.include_vars -->
+<template name="__ansible_builtin_include_vars" value="- name: $stub_title$&#10;  ansible.builtin.include_vars:&#10;   # file: $stub_file$&#10;   # dir: $stub_dir$&#10;   # name: $stub_name$&#10;   # depth: $stub_depth$&#10;   # ignore_files: $stub_ignore_files$&#10;" description="Load variables from files, dynamically within a task." toReformat="false" toShortenFQNames="true">
+    <variable name="stub_title" expression="&quot;Include vars&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_file" expression="&quot;(type=path) The file name from which variables should be loaded.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_dir" expression="&quot;(type=path) The directory name from which the variables should be loaded.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_name" expression="&quot;(type=str) The name of a variable into which assign the included vars.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_depth" expression="&quot;(type=int) When using dir, this module will recurse into subdirectories of the given directory up to this many levels. Default: 0 (unlimited).&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_ignore_files" expression="&quot;(type=list) List of file names to ignore.&quot;" defaultValue="" alwaysStopAt="true" />
+    <context><option name="YAML" value="true" /><option name="OTHER" value="true" /></context>
+</template>
+<!-- ansible.builtin.assert -->
+<template name="__ansible_builtin_assert" value="- name: $stub_title$&#10;  ansible.builtin.assert:&#10;    that:&#10;      - $stub_condition$&#10;   # fail_msg: $stub_fail_msg$&#10;   # success_msg: $stub_success_msg$&#10;   # quiet: $stub_quiet$&#10;" description="Asserts given expressions are true." toReformat="false" toShortenFQNames="true">
+    <variable name="stub_title" expression="&quot;Assert condition&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_condition" expression="&quot;condition is true&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_fail_msg" expression="&quot;(type=str) The customized message used for a failing assertion. Default: Assertion failed.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_success_msg" expression="&quot;(type=str) The customized message used for a passing assertion.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_quiet" expression="&quot;(type=bool) Set this to true to avoid verbose output. Default: false.&quot;" defaultValue="" alwaysStopAt="true" />
+    <context><option name="YAML" value="true" /><option name="OTHER" value="true" /></context>
+</template>
+<!-- ansible.builtin.fail -->
+<template name="__ansible_builtin_fail" value="- name: $stub_title$&#10;  ansible.builtin.fail:&#10;    msg: $stub_msg$&#10;" description="Fail with custom message." toReformat="false" toShortenFQNames="true">
+    <variable name="stub_title" expression="&quot;Fail task&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_msg" expression="&quot;(type=str) The customized message used for failing execution. Default: Failed as requested from task.&quot;" defaultValue="" alwaysStopAt="true" />
+    <context><option name="YAML" value="true" /><option name="OTHER" value="true" /></context>
+</template>
+<!-- ansible.builtin.stat -->
+<template name="__ansible_builtin_stat" value="- name: $stub_title$&#10;  ansible.builtin.stat:&#10;    path: $stub_path$&#10;   # follow: $stub_follow$&#10;   # get_checksum: $stub_get_checksum$&#10;   # checksum_algorithm: $stub_checksum_algorithm$&#10;   # get_mime: $stub_get_mime$&#10;  register: $stub_register$&#10;" description="Retrieve file or file system status." toReformat="false" toShortenFQNames="true">
+    <variable name="stub_title" expression="&quot;Get file stats&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_path" expression="&quot;(type=path) The full path of the file/object to get the facts of.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_follow" expression="&quot;(type=bool) Whether to follow symlinks. Default: false.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_get_checksum" expression="&quot;(type=bool) Whether to return a checksum of the file. Default: true.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_checksum_algorithm" expression="&quot;(type=str) [md5, sha1, sha224, sha256, sha384, sha512] Algorithm to determine checksum. Default: sha1.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_get_mime" expression="&quot;(type=bool) Use file magic and return data about the nature of the file. Default: true.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_register" expression="&quot;stat_result&quot;" defaultValue="" alwaysStopAt="true" />
+    <context><option name="YAML" value="true" /><option name="OTHER" value="true" /></context>
+</template>
+<!-- ansible.builtin.find -->
+<template name="__ansible_builtin_find" value="- name: $stub_title$&#10;  ansible.builtin.find:&#10;    paths: $stub_paths$&#10;   # patterns: $stub_patterns$&#10;   # recurse: $stub_recurse$&#10;   # file_type: $stub_file_type$&#10;   # age: $stub_age$&#10;   # size: $stub_size$&#10;   # hidden: $stub_hidden$&#10;  register: $stub_register$&#10;" description="Return a list of files based on specific criteria." toReformat="false" toShortenFQNames="true">
+    <variable name="stub_title" expression="&quot;Find files&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_paths" expression="&quot;(type=list) List of paths of directories to search.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_patterns" expression="&quot;(type=list) One or more filename/path patterns. Default: ['*'].&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_recurse" expression="&quot;(type=bool) If target is a directory, recursively descend into the directory looking for files. Default: false.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_file_type" expression="&quot;(type=str) [any, directory, file, link] Type of file to select. Default: file.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_age" expression="&quot;(type=str) Select files whose age is equal to or greater than the specified time. Use a negative age to find files equal to or less than the specified time.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_size" expression="&quot;(type=str) Select files whose size is equal to or greater than the specified size. Use a negative size to find files equal to or less than the specified size.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_hidden" expression="&quot;(type=bool) Set this to true to include hidden files. Default: false.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_register" expression="&quot;find_result&quot;" defaultValue="" alwaysStopAt="true" />
+    <context><option name="YAML" value="true" /><option name="OTHER" value="true" /></context>
+</template>
+<!-- ansible.builtin.fetch -->
+<template name="__ansible_builtin_fetch" value="- name: $stub_title$&#10;  ansible.builtin.fetch:&#10;    src: $stub_src$&#10;    dest: $stub_dest$&#10;   # flat: $stub_flat$&#10;   # fail_on_missing: $stub_fail_on_missing$&#10;   # validate_checksum: $stub_validate_checksum$&#10;" description="Fetch files from remote nodes." toReformat="false" toShortenFQNames="true">
+    <variable name="stub_title" expression="&quot;Fetch file from remote&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_src" expression="&quot;(type=str) The file on the remote system to fetch.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_dest" expression="&quot;(type=str) A directory to save the file into.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_flat" expression="&quot;(type=bool) Allows you to override the default behavior of appending hostname/path/to/file to the destination. Default: false.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_fail_on_missing" expression="&quot;(type=bool) When set to true, the task will fail if the remote file cannot be read for any reason. Default: true.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_validate_checksum" expression="&quot;(type=bool) Verify that the source and destination checksums match after the files are fetched. Default: true.&quot;" defaultValue="" alwaysStopAt="true" />
+    <context><option name="YAML" value="true" /><option name="OTHER" value="true" /></context>
+</template>
+<!-- ansible.builtin.get_url -->
+<template name="__ansible_builtin_get_url" value="- name: $stub_title$&#10;  ansible.builtin.get_url:&#10;    url: $stub_url$&#10;    dest: $stub_dest$&#10;   # mode: $stub_mode$&#10;   # owner: $stub_owner$&#10;   # group: $stub_group$&#10;   # checksum: $stub_checksum$&#10;   # timeout: $stub_timeout$&#10;   # force: $stub_force$&#10;   # url_username: $stub_url_username$&#10;   # url_password: $stub_url_password$&#10;   # validate_certs: $stub_validate_certs$&#10;" description="Downloads files from HTTP, HTTPS, or FTP to node." toReformat="false" toShortenFQNames="true">
+    <variable name="stub_title" expression="&quot;Download file&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_url" expression="&quot;(type=str) HTTP, HTTPS, or FTP URL in the form (http|https|ftp)://[user[:pass]]@host.domain[:port]/path.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_dest" expression="&quot;(type=path) Absolute path of where to download the file to.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_mode" expression="&quot;(type=raw) Permissions of the destination file or directory.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_owner" expression="&quot;(type=str) Name of the user that should own the file.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_group" expression="&quot;(type=str) Name of the group that should own the file.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_checksum" expression="&quot;(type=str) If a checksum is passed to this parameter, the digest of the destination file will be calculated after it is downloaded to ensure its integrity. Example: sha256:b1fd54c...&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_timeout" expression="&quot;(type=int) Timeout in seconds for URL request. Default: 10.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_force" expression="&quot;(type=bool) If yes, will download the file every time and replace the file if the contents change. Default: false.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_url_username" expression="&quot;(type=str) The username for use in HTTP basic authentication.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_url_password" expression="&quot;(type=str) The password for use in HTTP basic authentication.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_validate_certs" expression="&quot;(type=bool) If false, SSL certificates will not be validated. Default: true.&quot;" defaultValue="" alwaysStopAt="true" />
+    <context><option name="YAML" value="true" /><option name="OTHER" value="true" /></context>
+</template>
+<!-- ansible.builtin.uri -->
+<template name="__ansible_builtin_uri" value="- name: $stub_title$&#10;  ansible.builtin.uri:&#10;    url: $stub_url$&#10;   # method: $stub_method$&#10;   # body: $stub_body$&#10;   # body_format: $stub_body_format$&#10;   # headers: $stub_headers$&#10;   # status_code: $stub_status_code$&#10;   # return_content: $stub_return_content$&#10;   # validate_certs: $stub_validate_certs$&#10;   # url_username: $stub_url_username$&#10;   # url_password: $stub_url_password$&#10;  register: $stub_register$&#10;" description="Interacts with web services and APIs." toReformat="false" toShortenFQNames="true">
+    <variable name="stub_title" expression="&quot;HTTP request&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_url" expression="&quot;(type=str) HTTP or HTTPS URL in the form (http|https)://host.domain[:port]/path.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_method" expression="&quot;(type=str) The HTTP method of the request or response. Default: GET.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_body" expression="&quot;(type=raw) The body of the http request/response to the web service.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_body_format" expression="&quot;(type=str) [form-urlencoded, json, raw] The serialization format of the body. Default: raw.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_headers" expression="&quot;(type=dict) Add custom HTTP headers to a request in the format of a YAML hash.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_status_code" expression="&quot;(type=list) A list of valid, numeric, HTTP status codes that signifies success of the request. Default: [200].&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_return_content" expression="&quot;(type=bool) Whether or not to return the body of the response as a 'content' key. Default: false.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_validate_certs" expression="&quot;(type=bool) If false, SSL certificates will not be validated. Default: true.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_url_username" expression="&quot;(type=str) A username for the module to use for Digest, Basic or WSSE authentication.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_url_password" expression="&quot;(type=str) A password for the module to use for Digest, Basic or WSSE authentication.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_register" expression="&quot;http_response&quot;" defaultValue="" alwaysStopAt="true" />
+    <context><option name="YAML" value="true" /><option name="OTHER" value="true" /></context>
+</template>
+<!-- ansible.builtin.lineinfile -->
+<template name="__ansible_builtin_lineinfile" value="- name: $stub_title$&#10;  ansible.builtin.lineinfile:&#10;    path: $stub_path$&#10;    line: $stub_line$&#10;   # regexp: $stub_regexp$&#10;   # state: $stub_state$&#10;   # insertafter: $stub_insertafter$&#10;   # insertbefore: $stub_insertbefore$&#10;   # backrefs: $stub_backrefs$&#10;   # backup: $stub_backup$&#10;   # create: $stub_create$&#10;" description="Manage lines in text files." toReformat="false" toShortenFQNames="true">
+    <variable name="stub_title" expression="&quot;Manage line in file&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_path" expression="&quot;(type=path) The file to modify.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_line" expression="&quot;(type=str) The line to insert/replace into the file. Required for state=present.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_regexp" expression="&quot;(type=str) The regular expression to look for in every line of the file.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_state" expression="&quot;(type=str) [absent, present] Whether the line should be there or not. Default: present.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_insertafter" expression="&quot;(type=str) Used with state=present. If specified, the line will be inserted after the last match of specified regular expression.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_insertbefore" expression="&quot;(type=str) Used with state=present. If specified, the line will be inserted before the last match of the specified regular expression.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_backrefs" expression="&quot;(type=bool) Used with state=present. If set, the regexp can contain backreferences. Default: false.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_backup" expression="&quot;(type=bool) Create a backup file including the timestamp information. Default: false.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_create" expression="&quot;(type=bool) Used with state=present. If specified, the file will be created if it does not already exist. Default: false.&quot;" defaultValue="" alwaysStopAt="true" />
+    <context><option name="YAML" value="true" /><option name="OTHER" value="true" /></context>
+</template>
+<!-- ansible.builtin.blockinfile -->
+<template name="__ansible_builtin_blockinfile" value="- name: $stub_title$&#10;  ansible.builtin.blockinfile:&#10;    path: $stub_path$&#10;    block: |&#10;      $stub_block$&#10;   # marker: $stub_marker$&#10;   # insertafter: $stub_insertafter$&#10;   # insertbefore: $stub_insertbefore$&#10;   # state: $stub_state$&#10;   # backup: $stub_backup$&#10;   # create: $stub_create$&#10;" description="Insert/update/remove a block of multi-line text surrounded by customizable marker lines." toReformat="false" toShortenFQNames="true">
+    <variable name="stub_title" expression="&quot;Manage block in file&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_path" expression="&quot;(type=path) The file to modify.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_block" expression="&quot;The text to insert inside the marker lines. If the marker_begin is set, and the block is empty, the lines will be removed.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_marker" expression="&quot;(type=str) The marker line template. Default: # {mark} ANSIBLE MANAGED BLOCK.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_insertafter" expression="&quot;(type=str) If specified, the block will be inserted after the last match of specified regular expression.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_insertbefore" expression="&quot;(type=str) If specified, the block will be inserted before the last match of specified regular expression.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_state" expression="&quot;(type=str) [absent, present] Whether the block should be there or not. Default: present.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_backup" expression="&quot;(type=bool) Create a backup file. Default: false.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_create" expression="&quot;(type=bool) Create a new file if it does not exist. Default: false.&quot;" defaultValue="" alwaysStopAt="true" />
+    <context><option name="YAML" value="true" /><option name="OTHER" value="true" /></context>
+</template>
+<!-- ansible.builtin.replace -->
+<template name="__ansible_builtin_replace" value="- name: $stub_title$&#10;  ansible.builtin.replace:&#10;    path: $stub_path$&#10;    regexp: $stub_regexp$&#10;    replace: $stub_replace$&#10;   # after: $stub_after$&#10;   # before: $stub_before$&#10;   # backup: $stub_backup$&#10;" description="Replace all instances of a particular string in a file using a back-referenced regular expression." toReformat="false" toShortenFQNames="true">
+    <variable name="stub_title" expression="&quot;Replace in file&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_path" expression="&quot;(type=path) The file to modify.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_regexp" expression="&quot;(type=str) The regular expression to look for in the contents of the file.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_replace" expression="&quot;(type=str) The string to replace regexp matches in file. May contain backreferences that will be expanded.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_after" expression="&quot;(type=str) If specified, only content after this match will be replaced/removed.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_before" expression="&quot;(type=str) If specified, only content before this match will be replaced/removed.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_backup" expression="&quot;(type=bool) Create a backup file. Default: false.&quot;" defaultValue="" alwaysStopAt="true" />
+    <context><option name="YAML" value="true" /><option name="OTHER" value="true" /></context>
+</template>
+<!-- ansible.builtin.cron -->
+<template name="__ansible_builtin_cron" value="- name: $stub_title$&#10;  ansible.builtin.cron:&#10;    name: $stub_name$&#10;    job: $stub_job$&#10;   # state: $stub_state$&#10;   # minute: $stub_minute$&#10;   # hour: $stub_hour$&#10;   # day: $stub_day$&#10;   # month: $stub_month$&#10;   # weekday: $stub_weekday$&#10;   # user: $stub_user$&#10;   # special_time: $stub_special_time$&#10;" description="Manage cron.d and crontab entries." toReformat="false" toShortenFQNames="true">
+    <variable name="stub_title" expression="&quot;Manage cron job&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_name" expression="&quot;(type=str) Description of a crontab entry or, if env is set, the name of environment variable.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_job" expression="&quot;(type=str) The command to execute or, if env is set, the value of environment variable.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_state" expression="&quot;(type=str) [absent, present] Whether to ensure the job or environment variable is present or absent. Default: present.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_minute" expression="&quot;(type=str) Minute when the job should run (0-59, *, */2, etc). Default: *.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_hour" expression="&quot;(type=str) Hour when the job should run (0-23, *, */2, etc). Default: *.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_day" expression="&quot;(type=str) Day of the month the job should run (1-31, *, */2, etc). Default: *.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_month" expression="&quot;(type=str) Month of the year the job should run (1-12, *, */2, etc). Default: *.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_weekday" expression="&quot;(type=str) Day of the week that the job should run (0-6 for Sunday-Saturday, *, etc). Default: *.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_user" expression="&quot;(type=str) The specific user whose crontab should be modified.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_special_time" expression="&quot;(type=str) [annually, daily, hourly, monthly, reboot, weekly, yearly] Special time specification nickname.&quot;" defaultValue="" alwaysStopAt="true" />
+    <context><option name="YAML" value="true" /><option name="OTHER" value="true" /></context>
+</template>
+<!-- ansible.builtin.wait_for -->
+<template name="__ansible_builtin_wait_for" value="- name: $stub_title$&#10;  ansible.builtin.wait_for:&#10;    host: $stub_host$&#10;    port: $stub_port$&#10;   # state: $stub_state$&#10;   # timeout: $stub_timeout$&#10;   # delay: $stub_delay$&#10;   # sleep: $stub_sleep$&#10;   # path: $stub_path$&#10;   # search_regex: $stub_search_regex$&#10;" description="Waits for a condition before continuing." toReformat="false" toShortenFQNames="true">
+    <variable name="stub_title" expression="&quot;Wait for port/path&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_host" expression="&quot;(type=str) A resolvable hostname or IP address to wait for. Default: 127.0.0.1.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_port" expression="&quot;(type=int) Port number to poll. Mutually exclusive with path.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_state" expression="&quot;(type=str) [absent, drained, present, started, stopped] Either present, started, or stopped, absent, drained. Default: started.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_timeout" expression="&quot;(type=int) Maximum number of seconds to wait for, when used with another condition it will force an error. Default: 300.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_delay" expression="&quot;(type=int) Number of seconds to wait before starting to poll. Default: 0.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_sleep" expression="&quot;(type=int) Number of seconds to sleep between checks. Default: 1.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_path" expression="&quot;(type=path) Path to a file on the filesystem that must exist before continuing. Mutually exclusive with port.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_search_regex" expression="&quot;(type=str) Can be used to match a string in either a file or a socket connection.&quot;" defaultValue="" alwaysStopAt="true" />
+    <context><option name="YAML" value="true" /><option name="OTHER" value="true" /></context>
+</template>
+<!-- ansible.builtin.pause -->
+<template name="__ansible_builtin_pause" value="- name: $stub_title$&#10;  ansible.builtin.pause:&#10;   # seconds: $stub_seconds$&#10;   # minutes: $stub_minutes$&#10;   # prompt: $stub_prompt$&#10;   # echo: $stub_echo$&#10;" description="Pause playbook execution." toReformat="false" toShortenFQNames="true">
+    <variable name="stub_title" expression="&quot;Pause execution&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_seconds" expression="&quot;(type=int) A positive number of seconds to pause for. Mutually exclusive with minutes and prompt.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_minutes" expression="&quot;(type=str) A positive number of minutes to pause for. Mutually exclusive with seconds and prompt.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_prompt" expression="&quot;(type=str) Optional string, along with any default value, that will be printed in a prompt when pausing interactively.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_echo" expression="&quot;(type=bool) Controls whether or not keyboard input is shown when typing. Default: true.&quot;" defaultValue="" alwaysStopAt="true" />
+    <context><option name="YAML" value="true" /><option name="OTHER" value="true" /></context>
+</template>
+<!-- ansible.builtin.setup -->
+<template name="__ansible_builtin_setup" value="- name: $stub_title$&#10;  ansible.builtin.setup:&#10;   # gather_subset: $stub_gather_subset$&#10;   # gather_timeout: $stub_gather_timeout$&#10;   # filter: $stub_filter$&#10;" description="Gathers facts about remote hosts." toReformat="false" toShortenFQNames="true">
+    <variable name="stub_title" expression="&quot;Gather facts&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_gather_subset" expression="&quot;(type=list) If supplied, restrict the additional facts collected to the given subset. Default: ['all'].&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_gather_timeout" expression="&quot;(type=int) Set the default timeout in seconds for individual fact gathering. Default: 10.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_filter" expression="&quot;(type=list) Filter for ansible_* fact names. Default: ['*'].&quot;" defaultValue="" alwaysStopAt="true" />
+    <context><option name="YAML" value="true" /><option name="OTHER" value="true" /></context>
+</template>
+<!-- ansible.builtin.hostname -->
+<template name="__ansible_builtin_hostname" value="- name: $stub_title$&#10;  ansible.builtin.hostname:&#10;    name: $stub_name$&#10;   # use: $stub_use$&#10;" description="Manage hostname." toReformat="false" toShortenFQNames="true">
+    <variable name="stub_title" expression="&quot;Set hostname&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_name" expression="&quot;(type=str) Name of the host.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_use" expression="&quot;(type=str) Which strategy to use to update the hostname. Default: auto.&quot;" defaultValue="" alwaysStopAt="true" />
+    <context><option name="YAML" value="true" /><option name="OTHER" value="true" /></context>
+</template>
+<!-- ansible.builtin.reboot -->
+<template name="__ansible_builtin_reboot" value="- name: $stub_title$&#10;  ansible.builtin.reboot:&#10;   # reboot_timeout: $stub_reboot_timeout$&#10;   # pre_reboot_delay: $stub_pre_reboot_delay$&#10;   # post_reboot_delay: $stub_post_reboot_delay$&#10;   # connect_timeout: $stub_connect_timeout$&#10;   # test_command: $stub_test_command$&#10;   # msg: $stub_msg$&#10;" description="Reboot a machine." toReformat="false" toShortenFQNames="true">
+    <variable name="stub_title" expression="&quot;Reboot host&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_reboot_timeout" expression="&quot;(type=int) Maximum seconds to wait for machine to reboot and respond to a test command. Default: 600.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_pre_reboot_delay" expression="&quot;(type=int) Seconds for shutdown to wait before requesting reboot. Default: 0.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_post_reboot_delay" expression="&quot;(type=int) Seconds to wait after the reboot command was successful before attempting to validate the system rebooted successfully. Default: 0.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_connect_timeout" expression="&quot;(type=int) Maximum seconds to wait for a single successful TCP connection to the managed hosts before trying again. Default: 5.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_test_command" expression="&quot;(type=str) Command to run on the rebooted host and expected to return successfully to indicate the host is ready for further tasks. Default: whoami.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_msg" expression="&quot;(type=str) Message to display to users before rebooting. Default: Reboot initiated by Ansible.&quot;" defaultValue="" alwaysStopAt="true" />
+    <context><option name="YAML" value="true" /><option name="OTHER" value="true" /></context>
+</template>
+<!-- ansible.builtin.meta -->
+<template name="__ansible_builtin_meta" value="- ansible.builtin.meta: $stub_free_form$&#10;" description="Execute Ansible meta actions." toReformat="false" toShortenFQNames="true">
+    <variable name="stub_free_form" expression="&quot;(type=str) [clear_facts, clear_host_errors, end_batch, end_host, end_play, flush_handlers, noop, refresh_inventory, reset_connection] This module takes a free form command.&quot;" defaultValue="" alwaysStopAt="true" />
+    <context><option name="YAML" value="true" /><option name="OTHER" value="true" /></context>
+</template>
+<!-- ansible.builtin.script -->
+<template name="__ansible_builtin_script" value="- name: $stub_title$&#10;  ansible.builtin.script:&#10;    cmd: $stub_cmd$&#10;   # creates: $stub_creates$&#10;   # removes: $stub_removes$&#10;   # chdir: $stub_chdir$&#10;   # executable: $stub_executable$&#10;" description="Runs a local script on a remote node after transferring it." toReformat="false" toShortenFQNames="true">
+    <variable name="stub_title" expression="&quot;Run script on remote&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_cmd" expression="&quot;(type=str) Path to the local script to run followed by optional arguments.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_creates" expression="&quot;(type=path) A filename on the remote node, when it already exists, this step will not be run.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_removes" expression="&quot;(type=path) A filename on the remote node, when it does not exist, this step will not be run.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_chdir" expression="&quot;(type=path) Change into this directory on the remote node before running the script.&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_executable" expression="&quot;(type=str) Name or path of a executable to invoke the script with.&quot;" defaultValue="" alwaysStopAt="true" />
+    <context><option name="YAML" value="true" /><option name="OTHER" value="true" /></context>
+</template>
+<!-- ansible.builtin.raw -->
+<template name="__ansible_builtin_raw" value="- name: $stub_title$&#10;  ansible.builtin.raw: $stub_free_form$&#10;" description="Executes a low-down and dirty command (bypasses the module subsystem)." toReformat="false" toShortenFQNames="true">
+    <variable name="stub_title" expression="&quot;Run raw command&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_free_form" expression="&quot;(type=str) The raw module takes a free form command to run. There is no parameter named free_form.&quot;" defaultValue="" alwaysStopAt="true" />
+    <context><option name="YAML" value="true" /><option name="OTHER" value="true" /></context>
+</template>
+<!-- ansible.builtin.gather_facts -->
+<template name="__ansible_builtin_gather_facts" value="- name: $stub_title$&#10;  ansible.builtin.gather_facts:&#10;   # parallel: $stub_parallel$&#10;" description="Gathers facts about remote hosts." toReformat="false" toShortenFQNames="true">
+    <variable name="stub_title" expression="&quot;Gather facts&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="stub_parallel" expression="&quot;(type=bool) A toggle that controls if the fact modules are run in parallel. Default: false.&quot;" defaultValue="" alwaysStopAt="true" />
+    <context><option name="YAML" value="true" /><option name="OTHER" value="true" /></context>
+</template>
+</templateSet>

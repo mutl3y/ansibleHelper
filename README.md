@@ -5,11 +5,11 @@
 [![JetBrains plugin downloads](https://img.shields.io/jetbrains/plugin/d/15877-ansiblehelper.svg)](https://plugins.jetbrains.com/plugin/15877-ansiblehelper)
 
 <!-- Plugin description -->
-This IntelliJ Platform Plugin provides live templates for Ansible 2.9 and 2.10 versions
+This IntelliJ Platform Plugin provides live templates for Ansible 2.9, 2.10 and modern `ansible.builtin.*` modules (ansible-core 2.x)
 
-enables json schema options to validate ansible
+Enables JSON schema options to validate Ansible playbooks, roles and collections
 
-IDEA versions 2020.2 or later
+IDEA versions 2023.2 or later
 
 <!-- Plugin description end -->
 
